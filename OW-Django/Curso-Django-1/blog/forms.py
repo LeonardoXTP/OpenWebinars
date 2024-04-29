@@ -1,6 +1,11 @@
 from django import forms
+from .models import Post
 
-class PostForm(forms.Form):
-    titulo = forms.CharField(label='Titulo para el post', max_lenght=250)
-    cuerpo = forms.CharField(label='Contenido', max_length=250)
-    editor = forms.BooleanField(label='¿Publicar?')
+class PostForm(forms.ModelForm):
+    titulo = forms.CharField(label='Titulo para el post', max_length=250)
+    cuerpo = forms.CharField(label='Contenido', widget=forms.Textarea)
+    publicado = forms.BooleanField(label='¿Publicar?', required=False)
+    
+    class Meta:
+        model = Post
+        fields = ['titulo', 'cuerpo', 'publicado']

@@ -6,6 +6,17 @@
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
+    {% if messages %}{% endif %}
+
+        <ul>
+            {% for message in messages %}
+                <li>
+                    {{message|safe}}
+                    <a href="">x</a>
+                </li>
+            {% endfor %}
+        </ul>
+
     {% block content %}
 
     {% endblock %}
