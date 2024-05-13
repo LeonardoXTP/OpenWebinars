@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %} Crear post {% endblock %}
+
+{% block content %}
+
+    {% if new_post %}
+
+        <h1>¡Nuevo post creado!</h1>
+        <p>Mira el nuevo post <a href="{% url 'blog:post_detail' new_post.id%}">aquí</a>.</p>
+
+    {% else %}
+
+        <h1>Crear nuevo post</h1>
+
+        <form action="" method="POST">
+            {{form.as_p}}
+            {% csrf_token %}
+            <input type="submit" value="Crear una publicación">
+        </form> 
+
+    {% endif %}
+
+{% endblock %}
