@@ -6,7 +6,7 @@
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
-    {% if messages %}{% endif %}
+    {% if messages %}
 
         <ul>
             {% for message in messages %}
@@ -16,6 +16,19 @@
                 </li>
             {% endfor %}
         </ul>
+    {% endif %}
+
+    {% if request.user.is_authenticated %}
+
+        <p>Bienvenido {{ request.user.first_name|default:request.user.username}} </p>
+    
+    {% endif %}
+    
+    <a href="{% url 'login' %}">Iniciar Sesión</a>
+    <form id="logout-form" action="{% url 'logout' %}" method="post">
+        <a href="#" onclick="document.getElementById('logout-form').submit(); return false;">Cerrar Sesión</a>
+        {% csrf_token %}
+    </form>
 
     {% block content %}
 

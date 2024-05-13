@@ -4,6 +4,12 @@
 
 {% block content %}
 
+{% if request.user.is_aunthenticated %}
+
+    <a href="{% url 'blog:create_post' %}">Agregar nuevo post</a>
+
+{% endif %}
+
 <h1>Mis publicaciones</h1>
     {% for post in posts %}
         <h2>
