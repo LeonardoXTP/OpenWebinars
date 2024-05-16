@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Más etiquetas accesibilidad</title>
+</head>
+<body>
+    
+    <!-- etiquetas de audio -->
+    <audio controls> <!-- autoplay, loop, muted para video tambien --> 
+        <source src="media/Frase_de_Neil_Armstrong.mp3" type="audio/mp3">
+        <source src="media/Frase_de_Neil_Armstrong.ogg" type="audio/ogg">
+        Tu navegador no soporta esta etiqueta (audio)
+
+        <!-- Tu servidor web debe estar debidamente configurado -->
+        <track src="media/Frase_de_Neil_Armstrong_es.vtt" kind="subtitles" srclang="es" label="Español" type="text/vtt"/>
+        <track src="media/Frase_de_Neil_Armstrong_en.vtt" kind="subtitles" srclang="en" label="Ingles" type="text/vtt"/>
+    </audio>
+
+
+    <!-- etiquetas de video -->
+    <video width="320" height="240" controls>
+        <source src="media/Zeppelin_Explodes.webm" type="video/webm">
+        Tu navegador no soporta esta etiqueta (video)
+    </video>
+
+</body>
+</html>

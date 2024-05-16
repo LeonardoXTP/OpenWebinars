@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de inputs</title>
+</head>
+<body>
+    
+<form action="" method="post">
+
+    <!-- lista de inputs -->
+    <!--
+        date
+        datetime-local
+        email
+        month
+        number
+        text
+        tel
+        time
+        url
+        week
+        radio
+        checkbox
+        file
+        select
+        range
+        color
+        hidden
+        image
+        password
+        submit
+        reset
+        button
+    -->
+
+    <label for="date">Fecha</label>
+    <input type="date" name="date"><br><br>
+
+    <label for="datetime">Fecha y hora</label>
+    <input type="datetime-local" name="datetime"><br><br>
+
+    <label for="hora">Hora</label>
+    <input type="time" name="hora"><br><br>
+
+    <label for="email">Correo</label>
+    <input type="email" name="email"><br><br>
+
+    <label for="telefono">Telefono</label>
+    <input type="tel" name="telefono"><br><br>
+
+    <label for="mes">Mes</label>
+    <input type="month" name="mes"><br><br>
+
+    <label for="number">Numero</label>
+    <input type="number" name="number"><br><br>
+
+    <label for="pass">Contraseña</label>
+    <input type="password" name="pass"><br><br>
+
+    <label for="texto">Texto</label>
+    <input type="text" name="texto"><br><br>
+
+    <label for="url">Dirección web</label>
+    <input type="url" name="url"><br><br>
+
+    <label for="semana">Semana</label>
+    <input type="week" name="semana"><br><br>
+
+    <label for="genero">Sexo</label><br>
+    <input type="radio" name="genero" value="masculino">Hombre <br>
+    <input type="radio" name="genero" value="femenino">Mujer <br>
+    <input type="radio" name="genero" value="otro">Otro <br><br>
+
+    <label for="dispositivos">Dispositivos Electrónicos</label><br>
+    <input type="checkbox" name="dispositivos" value="movil">Movil <br>
+    <input type="checkbox" name="dispositivos" value="tablet">Tablet <br>
+    <input type="checkbox" name="dispositivos" value="laptop">Laptop <br><br>
+
+    <label for="fichero">Fichero</label><br>
+    <input type="file" name="fichero"><br><br>
+
+    <label for="color">Color</label>
+    <input type="color" name="color"><br><br>
+
+    <label for="range">Rango</label>
+    <input type="range" name="range"><br><br>
+
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Borrar">
+
+    <input list="editor">
+
+    <datalist id="editor">
+        <option value="Atom"></option>
+        <option value="Sublime"></option>
+        <option value="VSCode"></option>
+        <option value="Brackets"></option>
+        <option value="Notepad++"></option>
+    </datalist>
+</form>
+
+
+
+</body>
+</html>
