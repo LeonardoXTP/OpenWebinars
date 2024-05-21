@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de tablas</title>
+    <style>
+        .coches {
+            border-collapse: collapse;
+        }
+        .coches td, .coches th {
+            border: 1px solid black;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    
+    <table class="coches">
+        <thead>
+            <tr>
+                <td></td>
+                <td colspan="3"><img src="img/bugatti.jpg" alt="" width="300" height="200"></td>
+                <td colspan="3"><img src="img/ferrari.jpg" alt="" width="300" height="200"></td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th>Marca</th>
+                <td colspan="3">Bugatti</td>
+                <td colspan="2">Ferrari</td>
+            </tr>
+            <tr>
+                <th>Modelos</th>
+    
+                <td>Chiron</td>
+                <td>La Voiture Noire</td>
+                <td>Divo</td>
+    
+                <td>Enzo</td>
+                <td>Portofino</td>
+            </tr>
+            <tr>
+                <th>Colores</th>
+                <th>Blanco</th>
+                <td>
+                    <ul>
+                        <li>Negro</li>
+                        <li>Gris</li>
+                        <li>Rosa</li>
+                    </ul>
+                </td>
+                <th>Negro</th>
+    
+                <td colspan="2">
+                    <ul>
+                        <li>Negro</li>
+                        <li>Blanco</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>Velocidad máxima</th>
+                <th colspan="3">340 km/h</th>
+    
+                <th colspan="2">330 km/h</th>
+            </tr>
+            <tr>
+                <th rowspan="2">Tipos de combustible</th>
+                <th rowspan="2" colspan="3">Diesel</td>
+                <th colspan="2">Gasolina</td>
+            </tr>
+            <tr>
+                <th colspan="2">Electrico</th>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
